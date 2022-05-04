@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+
+import sys
+
+PAGE_SIZE = 4094
+
+if len(sys.argv) < 2:
+    sys.exit("No given address")
+
+print(f'The address {sys.argv[1]} contains: \n'
+      f'page number = {int(sys.argv[1]) // PAGE_SIZE} \n'
+      f'offset = {int(sys.argv[1]) % PAGE_SIZE} \n')
